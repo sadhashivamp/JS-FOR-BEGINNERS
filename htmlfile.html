@@ -1,0 +1,247 @@
+<html>
+    <head>  <!--
+       <style>
+           #mydiv
+           {
+                width : 100%;
+                height : 57px;
+                background-color : blue;
+                margin-top : 23px;
+           }
+       </style> -->
+    </head>
+
+    <body>
+        <script type = "text/javascript" language = "javascript" src = "external.js"></script>
+<!-- //create promtbox and parseInt(convert string to integer) -->
+      <!--  
+        <script>
+            var a =parseInt(prompt("enter first number"));
+            var b = parseInt(prompt("enter second number"));
+            document.write(a+b);
+        </script>   -->
+<!-- //parseFloat(convert string and take point values also)-->        
+      <!--
+        <script>        
+            var a =parseFloat(prompt("enter first number"));
+            var b = parseFloat(prompt("enter second number"));
+            var sum = a+b;
+            document.write(sum);
+        </script>   -->  
+<!-- //events in js(are the signals that tells the browser something will happened)-->
+<!--
+<input type = "button" value = "Click Me" onclick = "alert('Button is Clicked')">   -->
+   
+<!-- //how function calls with events-->
+<!--
+<input type = "button" value = "Click Me" onClick = "mymsg();">
+<script>
+    function mymsg()
+    {
+        document.write("Hey i am function");
+    }
+</script>   -->
+
+<!--//how do access class, id, paragraph in the javascript)-->
+<!--access the "id"-->
+<!--
+<p id = "para1"></p>
+<script>
+    var mymsg = document.getElementById("para1");
+    mymsg.innerHTML = "Hey i am paragraph";
+</script>   -->
+
+<!--//access the paragraph-->
+<!--
+<p> </p>
+<p> </p>
+<script>
+    var mymsg = document.getElementsByTagName("p")[1];
+    mymsg.innerHTML = "Hey i am paragraph";
+</script>  -->
+
+<!--//access the class-->
+<!--
+<p class = "myClass"> </p>
+<p class = "myClass"> </p>
+<script>
+    var mymsg = document.getElementsByClassName("myClass")[0];
+    mymsg.innerHTML = "Hey i am paragraph";
+</script>   -->
+
+<!--//ducument.querySelector-->
+<!--
+<p id = "para1"> </p>
+<script>
+    var mymsg = document.querySelector("#para1")[1];
+    mymsg.innerHTML = "Hey I am paragraph";
+</script>   -->
+<!--
+<p> </p>
+<p> </p>
+<script>
+    var mymsg = document.querySelectorAll("p")[1];
+    mymsg.innerHTML = "Hey I am paragraph";
+</script>   -->
+
+<!--
+<div>
+<h1> </h1>
+<p> </p>
+</div>
+<script>
+    var mymsg = document.querySelector("div>h1");
+    mymsg.innerHTML = "Hey I am Heading";
+</script>   -->
+
+<!--
+<div>
+    <h1 class = "myclass2"> </h1>
+    <p class = "myclass2"> </p>
+</div>
+    <script>
+        var mymsg = document.querySelector("p.myclass2");
+        mymsg.innerHTML = "Hey I am Paragraph";
+    </script>   -->
+    <!--
+
+<div id = "div1" onmouseover = "mydiv();">
+    Hey i am divTag
+</div> 
+<script>
+    function mydiv()
+    {
+    var mymsg = document.getElementById("div1");
+    mymsg.style.color = "red";
+    mymsg.style.backgroundColor = "blue";
+    mymsg.style.border = "10px solid black";
+    }
+</script>   -->
+
+<!--//Styling using java script-->
+<!--
+<input type = "button" value = "yellow" onclick = "yellow();">
+<input type = "button" value = "green" onclick = "green();">
+<script>
+    function yellow()
+    {
+        document.body.style.backgroundColor = "yellow";
+    }
+    function green()
+    {
+        document.body.style.backgroundColor = "green";
+    }
+</script>   -->
+
+<!--//Event listener in java script-->
+<!--
+<input type = "button" value = "Clickme" id = "mybtn">
+<script>
+    function mymsg()
+    {
+        alert("Hello Java Script")
+    }
+    document.getElementById("mybtn").addEventListener("click",mymsg);  
+
+</script>    -->
+
+<!--//focuse Event-->
+<!--
+<input type = "textbox" id = "mytxt">
+<script>
+function orange()
+{
+    document.getElementById("mytxt").style.backgroundColor = "orange";
+
+}
+function white()
+{
+    document.getElementById("mytxt").style.backgroundColor = "white";
+}
+document.getElementById("mytxt").addEventListener("focus",orange);
+document.getElementById("mytxt").addEventListener("focusout",white);
+</script>   -->
+
+<!--//divTag will be hide and show-->
+<!--
+<input type = "button" value = "clickme" id = "mybtn">
+<div id = "mydiv"></div>
+<script>
+    document.getElementById("mybtn").addEventListener("click",function()
+    {
+        var mybox = document.getElementById("mydiv");
+        if(mybox.style.display == "non")
+        {
+            mybox.style.display = "block";
+        }
+        else
+        {
+            mybox.style.display = "none";
+        }
+    })
+</script>   -->
+
+
+<!--//how to make and change simple background color of the body using js-->
+<!--
+<table border = "2" width = "300" height = "100" align = "center">
+    <td onmouseover =bgChange("red") onmouseout = bgChange("black")>Red</td>
+    <td onmouseover =bgChange("yellow") onmouseout = bgChange("black")>Yellow</td>
+    <td onmouseover =bgChange("violet") onmouseout = bgChange("black")>Violet</td>
+    <td onmouseover =bgChange("green") onmouseout = bgChange("black")>Green</td>
+    <td onmouseover =bgChange("orange") onmouseout = bgChange("black")>Orange</td>
+</table>
+<script>
+    var color;
+    function bgChange(color)
+    {
+        document.body.style.background = color;
+    }
+</script>   -->
+
+<!--//Form validation in js-->
+<!--
+    <form method = "post" onsubmit = "return myform();">
+    <p>Name: <br> <input type = "text" id = "name"></p>
+    <p>Email: <br> <input type = "text" id = "email"></p>
+    <p>Feedback: <br> <textarea rows = "5" id = "feedback"></textarea> </p>
+    <P><input type = "submit"></P>
+    </form>
+<script>
+    function myform()
+    {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var feedback = document.getElementById("feedback").value;
+        var validEmail=/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; 
+        if(name=="")
+        {
+            alert("Please enter your name");
+            return false;
+        }
+        else if(email=="")
+        {
+            alert("Please enter your email id");
+            return false;
+        }
+        else if(validEmail.test(email)==false)
+        {
+            alert("please enter valid email id")
+            return false;
+        }
+        else if(feedback=="")
+        {
+            alert("please write your feedback");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+</script>   -->
+
+
+
+</body>
+</html> 
