@@ -239,7 +239,8 @@ function addition()
 var a = 5;
 var b = 10;
 document.write(a+b);
-} */
+} 
+addition(); */
 /*
 function addition1(a,b)
 {
